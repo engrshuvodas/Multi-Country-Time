@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Current Date Time</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3175/3175021.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style></style>
+  </head>
+
+  <body>
+
+    <div class="container-fluid my-md-3 my-5">
+      <div class="row justify-content-center">
+
+        <div class="col-8 col-md-3 mb-3">
+          <div class="card text-center py-3 fs-5" id="bangladesh">
+            Bangladesh <br>
+            -- <br>
+            -- <br>
+            --
+          </div>
+        </div>
+        <div class="col-8 col-md-3 mb-3">
+          <div class="card text-center py-3 fs-5" id="china">
+            China <br>
+            -- <br>
+            -- <br>
+            --
+          </div>
+        </div>
+        <div class="col-8 col-md-3 mb-3">
+          <div class="card text-center py-3 fs-5" id="usa">
+            United States <br>
+            -- <br>
+            -- <br>
+            --
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+      function getTimeOfDay(hour, minute) {
+        const totalMinutes = hour * 60 + minute;
+
+        if (totalMinutes >= 300 && totalMinutes <= 719) {
+          return "সকাল"; // 5:00 AM - 11:59 AM
+        } else if (totalMinutes >= 720 && totalMinutes <= 1139) {
+          return "দুপুর"; // 12 AM - 6:59 PM
+        } else {
+          return "রাত"; // 7:00 PM - 4:59 AM
+        }
+      }
+
+      function updateTime() {
+        const countries = [
+          {
+            id: "bangladesh",
+            timeZone: "Asia/Dhaka",
+            name: "Bangladesh"
+          },
+          {
+            id: "china",
+            timeZone: "Asia/Shanghai",
+            name: "China"
+          },
+          {
+            id: "usa",
+            timeZone: "America/New_York",
+            name: "United States"
+          }
+        ];
+
+        countries.forEach(country => {
+          const now = new Date();
+
+          // Get time in target timezone
+          const localeTime = new Date(now.toLocaleString("en-US", { timeZone: country.timeZone }));
+          const hour = localeTime.getHours();
+          const minute = localeTime.getMinutes();
+
+          const timeOfDay = getTimeOfDay(hour, minute);
+
+          const optionsDate = { timeZone: country.timeZone, day: '2-digit', month: 'long', year: 'numeric' };
+          const optionsTime = { timeZone: country.timeZone, hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+
+          const date = new Intl.DateTimeFormat('en-US', optionsDate).format(now);
+          const time = new Intl.DateTimeFormat('en-US', optionsTime).format(now);
+
+          const element = document.getElementById(country.id);
+          element.innerHTML = `${country.name} <br>${date} <br>${timeOfDay} <br>${time}`;
+        });
+      }
+
+      // Initial call and interval every second
+      updateTime();
+      setInterval(updateTime, 1000);
+    </script>
+
+  </body>
+</html>
