@@ -51,15 +51,14 @@ const countriesData = [
   { name: 'Zimbabwe', timeZone: 'Africa/Harare', shortTZ: 'CAT' }
 ];
 
-// Original countries (always start with these)
-const originalCountries = [
-  { id: 'bangladesh', ...countriesData.find(c => c.name === 'Bangladesh') },
-  { id: 'china', ...countriesData.find(c => c.name === 'China') },
-  { id: 'usa', ...countriesData.find(c => c.name === 'United States') }
-];
+// All countries with IDs for display
+const allCountries = countriesData.map((country, index) => ({
+  id: `country-${index}`,
+  ...country
+}));
 
-// Currently displayed countries (filtered based on search)
-let displayedCountries = [...originalCountries];
+// Currently displayed countries (starts with all, filtered by search)
+let displayedCountries = [...allCountries];
 
 // DOM elements
 const cardsGrid = document.querySelector('.cards-grid');
@@ -89,8 +88,8 @@ async function detectUserCountry() {
 // Filter countries based on search query (FOUND-style logic)
 function filterCountries(query) {
   if (!query.trim()) {
-    // If no query, show all original countries
-    displayedCountries = [...originalCountries];
+    // If no query, show ALL countries
+    displayedCountries = [...allCountries];
   } else {
     // Find the first matching country (case-insensitive, partial match)
     const foundCountry = countriesData.find(country =>
