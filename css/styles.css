@@ -66,42 +66,7 @@ body {
   color: #b0b0b0;
 }
 
-.dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: rgba(26, 26, 46, 0.95);
-  border: 1px solid #00d4ff;
-  border-radius: 10px;
-  max-height: 200px;
-  overflow-y: auto;
-  z-index: 1000;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  display: none;
-}
 
-.dropdown.show {
-  display: block;
-}
-
-.dropdown-item {
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
-}
-
-.dropdown-item:hover,
-.dropdown-item.active {
-  background: rgba(0, 212, 255, 0.2);
-  color: #00ff88;
-}
-
-.dropdown-item:last-child {
-  border-bottom: none;
-}
 
 /* Cards Grid */
 .cards-grid {

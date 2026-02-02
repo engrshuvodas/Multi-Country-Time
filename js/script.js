@@ -1,38 +1,69 @@
 // List of available countries with their timezones
 const countriesData = [
+  { name: 'Argentina', timeZone: 'America/Argentina/Buenos_Aires', shortTZ: 'ART' },
+  { name: 'Austria', timeZone: 'Europe/Vienna', shortTZ: 'CET' },
+  { name: 'Bahrain', timeZone: 'Asia/Bahrain', shortTZ: 'AST' },
   { name: 'Bangladesh', timeZone: 'Asia/Dhaka', shortTZ: 'BST' },
-  { name: 'China', timeZone: 'Asia/Shanghai', shortTZ: 'CST' },
-  { name: 'United States', timeZone: 'America/New_York', shortTZ: 'EST' },
-  { name: 'United Kingdom', timeZone: 'Europe/London', shortTZ: 'GMT' },
-  { name: 'India', timeZone: 'Asia/Kolkata', shortTZ: 'IST' },
-  { name: 'Japan', timeZone: 'Asia/Tokyo', shortTZ: 'JST' },
-  { name: 'Germany', timeZone: 'Europe/Berlin', shortTZ: 'CET' },
-  { name: 'France', timeZone: 'Europe/Paris', shortTZ: 'CET' },
-  { name: 'Canada', timeZone: 'America/Toronto', shortTZ: 'EST' },
-  { name: 'Australia', timeZone: 'Australia/Sydney', shortTZ: 'AEST' },
+  { name: 'Belgium', timeZone: 'Europe/Brussels', shortTZ: 'CET' },
   { name: 'Brazil', timeZone: 'America/Sao_Paulo', shortTZ: 'BRT' },
-  { name: 'Russia', timeZone: 'Europe/Moscow', shortTZ: 'MSK' },
-  { name: 'South Korea', timeZone: 'Asia/Seoul', shortTZ: 'KST' },
-  { name: 'Mexico', timeZone: 'America/Mexico_City', shortTZ: 'CST' },
+  { name: 'Cambodia', timeZone: 'Asia/Phnom_Penh', shortTZ: 'ICT' },
+  { name: 'Cameroon', timeZone: 'Africa/Douala', shortTZ: 'WAT' },
+  { name: 'Canada', timeZone: 'America/Toronto', shortTZ: 'EST' },
+  { name: 'China', timeZone: 'Asia/Shanghai', shortTZ: 'CST' },
+  { name: 'Colombia', timeZone: 'America/Bogota', shortTZ: 'COT' },
+  { name: 'Denmark', timeZone: 'Europe/Copenhagen', shortTZ: 'CET' },
+  { name: 'Dominican Republic', timeZone: 'America/Santo_Domingo', shortTZ: 'AST' },
+  { name: 'Estonia', timeZone: 'Europe/Tallinn', shortTZ: 'EET' },
+  { name: 'France', timeZone: 'Europe/Paris', shortTZ: 'CET' },
+  { name: 'Georgia', timeZone: 'Asia/Tbilisi', shortTZ: 'GET' },
+  { name: 'Germany', timeZone: 'Europe/Berlin', shortTZ: 'CET' },
+  { name: 'Hong Kong', timeZone: 'Asia/Hong_Kong', shortTZ: 'HKT' },
+  { name: 'India', timeZone: 'Asia/Kolkata', shortTZ: 'IST' },
+  { name: 'Israel', timeZone: 'Asia/Jerusalem', shortTZ: 'IST' },
   { name: 'Italy', timeZone: 'Europe/Rome', shortTZ: 'CET' },
-  { name: 'Spain', timeZone: 'Europe/Madrid', shortTZ: 'CET' },
+  { name: 'Ivory Coast', timeZone: 'Africa/Abidjan', shortTZ: 'GMT' },
+  { name: 'Kazakhstan', timeZone: 'Asia/Almaty', shortTZ: 'ALMT' },
+  { name: 'Kenya', timeZone: 'Africa/Nairobi', shortTZ: 'EAT' },
+  { name: 'Laos', timeZone: 'Asia/Vientiane', shortTZ: 'ICT' },
+  { name: 'Malaysia', timeZone: 'Asia/Kuala_Lumpur', shortTZ: 'MYT' },
+  { name: 'Mexico', timeZone: 'America/Mexico_City', shortTZ: 'CST' },
+  { name: 'Moldova', timeZone: 'Europe/Chisinau', shortTZ: 'EET' },
+  { name: 'Morocco', timeZone: 'Africa/Casablanca', shortTZ: 'WET' },
+  { name: 'Mozambique', timeZone: 'Africa/Maputo', shortTZ: 'CAT' },
   { name: 'Netherlands', timeZone: 'Europe/Amsterdam', shortTZ: 'CET' },
-  { name: 'Sweden', timeZone: 'Europe/Stockholm', shortTZ: 'CET' },
+  { name: 'Nigeria', timeZone: 'Africa/Lagos', shortTZ: 'WAT' },
   { name: 'Norway', timeZone: 'Europe/Oslo', shortTZ: 'CET' },
-  { name: 'Denmark', timeZone: 'Europe/Copenhagen', shortTZ: 'CET' }
+  { name: 'Pakistan', timeZone: 'Asia/Karachi', shortTZ: 'PKT' },
+  { name: 'Panama', timeZone: 'America/Panama', shortTZ: 'EST' },
+  { name: 'Portugal', timeZone: 'Europe/Lisbon', shortTZ: 'WET' },
+  { name: 'Qatar', timeZone: 'Asia/Qatar', shortTZ: 'AST' },
+  { name: 'Saudi Arabia', timeZone: 'Asia/Riyadh', shortTZ: 'AST' },
+  { name: 'Singapore', timeZone: 'Asia/Singapore', shortTZ: 'SGT' },
+  { name: 'South Africa', timeZone: 'Africa/Johannesburg', shortTZ: 'SAST' },
+  { name: 'Spain', timeZone: 'Europe/Madrid', shortTZ: 'CET' },
+  { name: 'Sri Lanka', timeZone: 'Asia/Colombo', shortTZ: 'SLST' },
+  { name: 'Switzerland', timeZone: 'Europe/Zurich', shortTZ: 'CET' },
+  { name: 'Ukraine', timeZone: 'Europe/Kiev', shortTZ: 'EET' },
+  { name: 'United Arab Emirates', timeZone: 'Asia/Dubai', shortTZ: 'GST' },
+  { name: 'United Kingdom', timeZone: 'Europe/London', shortTZ: 'GMT' },
+  { name: 'United States', timeZone: 'America/New_York', shortTZ: 'EST' },
+  { name: 'Venezuela', timeZone: 'America/Caracas', shortTZ: 'VET' },
+  { name: 'Zimbabwe', timeZone: 'Africa/Harare', shortTZ: 'CAT' }
 ];
 
-// Currently displayed countries (start with the three original)
-let displayedCountries = [
+// Original countries (always start with these)
+const originalCountries = [
   { id: 'bangladesh', ...countriesData.find(c => c.name === 'Bangladesh') },
   { id: 'china', ...countriesData.find(c => c.name === 'China') },
   { id: 'usa', ...countriesData.find(c => c.name === 'United States') }
 ];
 
+// Currently displayed countries (filtered based on search)
+let displayedCountries = [...originalCountries];
+
 // DOM elements
 const cardsGrid = document.querySelector('.cards-grid');
 const searchInput = document.getElementById('search-input');
-const dropdown = document.querySelector('.dropdown');
 
 // Detect user's country on load
 async function detectUserCountry() {
@@ -55,6 +86,28 @@ async function detectUserCountry() {
   }
 }
 
+// Filter countries based on search query (FOUND-style logic)
+function filterCountries(query) {
+  if (!query.trim()) {
+    // If no query, show all original countries
+    displayedCountries = [...originalCountries];
+  } else {
+    // Find the first matching country (case-insensitive, partial match)
+    const foundCountry = countriesData.find(country =>
+      country.name.toLowerCase().includes(query.toLowerCase())
+    );
+
+    if (foundCountry) {
+      // If found, show only that country
+      displayedCountries = [{ id: `search-${foundCountry.name.toLowerCase().replace(/\s+/g, '-')}`, ...foundCountry }];
+    } else {
+      // If not found, show "No data found" state
+      displayedCountries = [{ id: 'no-data', name: 'No data found', timeZone: '', shortTZ: '' }];
+    }
+  }
+  updateCards();
+}
+
 // Get time of day in English
 function getTimeOfDay(hour, minute) {
   const totalMinutes = hour * 60 + minute;
@@ -73,6 +126,21 @@ function getTimeOfDay(hour, minute) {
 // Update time for all displayed countries
 function updateTime() {
   displayedCountries.forEach(country => {
+    const card = document.getElementById(country.id);
+    if (!card) return;
+
+    if (country.id === 'no-data') {
+      // Special case for "No data found"
+      card.innerHTML = `
+        <div class="card-country">${country.name}</div>
+        <div class="card-date">--</div>
+        <div class="card-period">--</div>
+        <div class="card-time">--</div>
+        <div class="card-timezone">--</div>
+      `;
+      return;
+    }
+
     const now = new Date();
 
     // Get time in target timezone
@@ -100,17 +168,14 @@ function updateTime() {
     const date = new Intl.DateTimeFormat('en-US', optionsDate).format(now);
     const time = new Intl.DateTimeFormat('en-US', optionsTime).format(now);
 
-    const card = document.getElementById(country.id);
-    if (card) {
-      card.innerHTML = `
-        <div class="card-country">${country.name}</div>
-        <div class="card-date">${date}</div>
-        <div class="card-period">${timeOfDay}</div>
-        <div class="card-time">${time}</div>
-        <div class="card-timezone">${country.shortTZ}</div>
-        ${displayedCountries.length > 3 ? '<button class="remove-btn" onclick="removeCountry(\'' + country.id + '\')">×</button>' : ''}
-      `;
-    }
+    card.innerHTML = `
+      <div class="card-country">${country.name}</div>
+      <div class="card-date">${date}</div>
+      <div class="card-period">${timeOfDay}</div>
+      <div class="card-time">${time}</div>
+      <div class="card-timezone">${country.shortTZ}</div>
+      ${displayedCountries.length > 3 && country.id !== 'no-data' ? '<button class="remove-btn" onclick="removeCountry(\'' + country.id + '\')">×</button>' : ''}
+    `;
   });
 }
 
@@ -138,53 +203,9 @@ function removeCountry(countryId) {
   updateCards();
 }
 
-// Handle search input
-function handleSearch() {
-  const query = searchInput.value.toLowerCase();
-  const filteredCountries = countriesData.filter(country =>
-    country.name.toLowerCase().includes(query) &&
-    !displayedCountries.some(dc => dc.name === country.name)
-  );
-
-  dropdown.innerHTML = '';
-  if (query && filteredCountries.length > 0) {
-    filteredCountries.forEach(country => {
-      const item = document.createElement('div');
-      item.className = 'dropdown-item';
-      item.textContent = country.name;
-      item.onclick = () => selectCountry(country);
-      dropdown.appendChild(item);
-    });
-    dropdown.classList.add('show');
-  } else {
-    dropdown.classList.remove('show');
-  }
-}
-
-// Select a country from dropdown
-function selectCountry(country) {
-  if (displayedCountries.length >= 8) {
-    alert('Maximum 8 countries allowed. Remove some to add more.');
-    return;
-  }
-
-  const newCountry = {
-    id: `country-${Date.now()}`,
-    ...country
-  };
-  displayedCountries.push(newCountry);
-  updateCards();
-  searchInput.value = '';
-  dropdown.classList.remove('show');
-}
-
 // Event listeners
-searchInput.addEventListener('input', handleSearch);
-searchInput.addEventListener('focus', handleSearch);
-document.addEventListener('click', (e) => {
-  if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
-    dropdown.classList.remove('show');
-  }
+searchInput.addEventListener('input', (e) => {
+  filterCountries(e.target.value);
 });
 
 // Initialize
